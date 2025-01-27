@@ -1,0 +1,158 @@
+@import './mixin.scss';
+
+.title-picture {
+  position: relative;
+  padding-bottom: 130px;
+
+  @include nlgs{
+    padding-bottom: $padding-desk;
+  }
+
+  @include nlgs{
+    padding-bottom: $padding-mob;
+  }
+
+  // .title-picture_after
+
+  &_after {
+    &::after{
+      content: '';
+      width: 100vw;
+      height: 256px;
+      display: block;
+      position: absolute;
+      transform: translate(-50%, 0%);
+      left: 50%;
+      bottom: 0;
+      background-color: $color-Grey-5-cool;
+
+      @include nlgs{
+        bottom: 425px;
+      }
+
+      @include nsm {
+        height: 44.4vw;
+        bottom: -6vw;
+      }
+    }
+  }
+  
+  // .title-picture__container-box
+
+  &__container-box {
+    
+  }
+  
+  // .title-picture__title-container
+
+  &__title-container {
+    width: 565px;
+    margin: auto;
+    margin-bottom: 164px;
+
+    @include nlgs{
+      position: relative;
+      z-index: 1;
+      width: 692px;
+      margin-bottom: 32px;
+    }
+
+    @include nsm {
+      width: 100%;
+      margin-bottom: 8.9vw;
+    }
+  }
+
+  // .title-picture__title-item
+
+  &__title-item {
+    margin-bottom: 16px;
+    @include font-H1-phone;
+    text-transform: uppercase;
+    color: $color-Blue-1;
+    text-align: center;
+    
+    @include nlgs{
+      margin-bottom:16px; 
+    }
+
+    @include nsm {
+      margin-bottom: 4.4vw;
+    }
+  }
+
+  // .title-picture__subtitle
+
+  &__subtitle {
+    @include font-H3;
+    color: $color-Text-Grey;
+    text-align: center;
+  }
+
+  // .title-picture__img-container
+
+  &__img-container {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  // .title-picture__img
+
+  &__img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.icons-list {
+
+		// .icons-list__container-box
+
+		&__container-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $padding-desk;
+		}
+
+		// .icons-list__list-item
+
+		&__list-item {
+      flex-basis: min-content;
+      min-width: 20.5%;
+
+      @include nlgs{
+        min-width: 46%;
+      }
+		}
+
+		// .icons-list__svg-container
+
+		&__svg-container {
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+
+      @include nlgs{
+        align-items: center;
+        flex-direction: row;
+        column-gap: 16px;
+      }
+		}
+
+		// .icons-list__svg
+
+		&__svg {
+      width: $padding-desk;
+      height: auto;
+      fill: $color-Blue-1;
+      flex-shrink: 0
+		}
+
+		// .icons-list__svg-signature
+
+		&__svg-signature {
+      @include font-p;
+      color: $color-Text-Grey
+		}
+}

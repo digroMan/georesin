@@ -1,0 +1,133 @@
+// Ubuntu
+
+@font-face {
+  font-family: "Ubuntu";
+  font-display: swap;
+  src:
+    url("../fonts/Ubuntu-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  font-display: swap;
+  src:
+    url("../fonts/Ubuntu-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  font-display: swap;
+  src:
+    url("../fonts/Ubuntu-Italic.ttf") format("truetype");
+  font-style: italic;
+}
+
+@mixin font-menu {
+  font-weight: 500;
+  line-height: 1;
+
+  @include nsm {
+    font-size: 3.9vw;
+  }
+}
+
+@mixin font-H1 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.3; // 42px
+
+  @include nsm {
+    font-size: 8.9vw;
+  }
+}
+
+@mixin font-H1-phone {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.2; // 32px
+
+  @include nsm {
+    font-size: 7.2vw;
+  }
+}
+
+@mixin font-H2 {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.2; // 32px
+
+  @include nsm {
+    font-size: 7.2vw;
+  }
+}
+
+@mixin font-H2-phone {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.2; // 26px
+
+  @include nsm {
+    font-size: 6.1vw;
+  }
+}
+
+@mixin font-H3 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4; // 28px
+
+  @include nsm {
+    font-size: 5.6vw;
+  }
+}
+
+@mixin font-p {
+  font-size: 16px;
+  line-height: 1.5; 
+
+  @include nsm {
+    font-size: 4.4vw;
+  }
+}
+
+@mixin font-button {
+  font-weight: 500;
+  line-height: 1; 
+
+  @include nsm {
+    font-size: 3.9vw;
+  }
+}
+
+@mixin font-numbers {
+  font-size: 128px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -10%; 
+
+  @include nsm {
+    font-size: 35.6vw;
+  }
+}
+
+@mixin font-quote {
+  font-size: 20px;
+  font-style: italic;
+  line-height: 1.4;
+
+  @include nsm {
+    font-size: 5.6vw;
+  }
+}
+
+@mixin font-legal {
+  line-height: 1.5;
+
+  @include nsm {
+    font-size: 3.9vw;
+  }
+}
