@@ -1,15 +1,15 @@
 @import './mixin.scss';
 
 .title-picture {
+  padding-top: 67px;
   position: relative;
-  padding-bottom: 130px;
 
   @include nlgs{
     padding-bottom: $padding-desk;
   }
 
-  @include nlgs{
-    padding-bottom: $padding-mob;
+  @include nsm{
+    padding-bottom: 18.2vw;
   }
 
   // .title-picture_after
@@ -23,16 +23,16 @@
       position: absolute;
       transform: translate(-50%, 0%);
       left: 50%;
-      bottom: 0;
+      bottom: -40px;
       background-color: $color-Grey-5-cool;
 
       @include nlgs{
-        bottom: 425px;
+        bottom: 360px;
       }
 
       @include nsm {
         height: 44.4vw;
-        bottom: -6vw;
+        bottom: 8vw;
       }
     }
   }
@@ -53,7 +53,7 @@
     @include nlgs{
       position: relative;
       z-index: 1;
-      width: 692px;
+      width: 695px;
       margin-bottom: 32px;
     }
 
@@ -74,10 +74,12 @@
     
     @include nlgs{
       margin-bottom:16px; 
+      @include font-H1
     }
 
     @include nsm {
       margin-bottom: 4.4vw;
+      @include font-H1-phone;
     }
   }
 
@@ -92,9 +94,19 @@
   // .title-picture__img-container
 
   &__img-container {
-    width: 100%;
+    width: 77.3%;
+    margin: auto;
     position: relative;
     z-index: 1;
+
+    @include nlgs {
+      width: 100%;
+    }
+
+    @include nsm {
+      width: 100vw;
+      left: -9vw;
+    }
   }
 
   // .title-picture__img
@@ -106,23 +118,38 @@
 }
 
 .icons-list {
+  padding-top: 71px;
+
+  @include nlgs{
+    padding-top: 0;
+  }
 
 		// .icons-list__container-box
 
 		&__container-box {
       display: flex;
       flex-wrap: wrap;
-      gap: $padding-desk;
+      row-gap: $padding-desk;
+      justify-content: space-between;
+
+      @include nsm {
+        row-gap: 9vw;
+      }
 		}
 
 		// .icons-list__list-item
 
 		&__list-item {
       flex-basis: min-content;
-      min-width: 20.5%;
+      min-width: 20.6%;
 
       @include nlgs{
         min-width: 46%;
+      }
+
+      @include nsm {
+        min-width: fit-content;
+        width: 100%;
       }
 		}
 
@@ -138,6 +165,10 @@
         flex-direction: row;
         column-gap: 16px;
       }
+
+      @include nsm {
+        align-items: flex-start;
+      }
 		}
 
 		// .icons-list__svg
@@ -146,13 +177,125 @@
       width: $padding-desk;
       height: auto;
       fill: $color-Blue-1;
-      flex-shrink: 0
+      flex-shrink: 0;
+
+      @include nsm {
+        width: $padding-mob;
+      }
 		}
 
 		// .icons-list__svg-signature
 
 		&__svg-signature {
       @include font-p;
-      color: $color-Text-Grey
+      color: $color-Text-Grey;
+
+      @include nsm {
+        width: 69%;
+      }
+
+      // .icons-list__svg-signature_width-100
+
+      &_width-100{
+        @include nsm {
+          width: 100%;
+        }
+      }
+		}
+}
+
+.services-by-type {
+
+		// .services-by-type__container-box
+
+		&__container-box {
+		}
+
+    // .services-by-type__title-container
+
+    &__title-container {
+      margin-bottom: $margin-desk;
+
+      @include nlgs{
+        position: relative;
+        z-index: 1;
+        width: 695px;
+        margin-bottom: 32px;
+      }
+
+      @include nsm {
+        width: 100%;
+        margin-bottom: 8.9vw;
+      }
+    }
+
+    // .services-by-type__title-item
+
+    &__title-item {
+      @include font-H2;
+      text-transform: uppercase;
+      color: $color-Black-cool;
+      
+      @include nlgs{
+        margin-bottom:16px; 
+        @include font-H1
+      }
+
+      @include nsm {
+        margin-bottom: 4.4vw;
+        @include font-H1-phone;
+      }
+    }
+
+		// .services-by-type__list-container
+
+		&__list-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      position: relative;
+      column-gap: 360px;
+
+      @include nsm {
+        row-gap: 9vw;
+      }
+		}
+
+		// .services-by-type__list-item
+
+		&__list-item {
+      width: 360px;
+
+      @include nlgs{
+      }
+
+      @include nsm {
+        width: 100%;
+      }
+
+      // .services-by-type__list-item_absolute
+
+      &_absolute{
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+      }
+		}
+
+		// .services-by-type__img-container
+
+		&__img-container {
+		}
+
+		// .services-by-type__img
+
+		&__img {
+		}
+
+		// .services-by-type__img-signature
+
+		&__img-signature {
+
 		}
 }
