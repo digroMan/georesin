@@ -119,6 +119,7 @@
 
 .icons-list {
   padding-top: 71px;
+  min-height: auto;
 
   @include nlgs{
     padding-top: 0;
@@ -205,6 +206,7 @@
 }
 
 .services-by-type {
+  padding-top: 67px;
 
 		// .services-by-type__container-box
 
@@ -214,7 +216,7 @@
     // .services-by-type__title-container
 
     &__title-container {
-      margin-bottom: $margin-desk;
+      margin-bottom: 100px;
 
       @include nlgs{
         position: relative;
@@ -255,6 +257,7 @@
       justify-content: space-between;
       position: relative;
       column-gap: 360px;
+      row-gap: 40px;
 
       @include nsm {
         row-gap: 9vw;
@@ -286,16 +289,35 @@
 		// .services-by-type__img-container
 
 		&__img-container {
+      padding: 24px;
+
+      // .services-by-type__img-container_padding-top-0
+
+      &_padding-top-0{
+        padding-top: 0;
+      }
+
+      // .services-by-type__img-container_padding-top-40
+      
+      &_padding-top-40{
+        padding-top: 40px;
+      }
 		}
 
 		// .services-by-type__img
 
 		&__img {
+      width: 75%;
+      height: auto;
+      display: block;
+      margin: auto;
+      margin-bottom: 16px;
 		}
 
 		// .services-by-type__img-signature
 
 		&__img-signature {
-
+      @include font-H3;
+      text-align: center;
 		}
 }
