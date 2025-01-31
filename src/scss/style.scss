@@ -120,7 +120,7 @@ figcaption {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-color: #fff;
+  background-color: $color-Unwhite;
 
   @include nlg{
     min-height: auto;

@@ -216,18 +216,15 @@
     // .services-by-type__title-container
 
     &__title-container {
-      margin-bottom: 100px;
+      margin-bottom: 125px;
 
       @include nlgs{
-        position: relative;
-        z-index: 1;
-        width: 695px;
-        margin-bottom: 32px;
+        margin-bottom: 112px;
       }
 
       @include nsm {
         width: 100%;
-        margin-bottom: 8.9vw;
+        margin-bottom: 34.5vw;
       }
     }
 
@@ -240,12 +237,15 @@
       
       @include nlgs{
         margin-bottom:16px; 
-        @include font-H1
       }
 
       @include nsm {
         margin-bottom: 4.4vw;
-        @include font-H1-phone;
+        @include font-H2-phone;
+      }
+
+      &:last-child{
+        margin-bottom: 0;
       }
     }
 
@@ -257,19 +257,80 @@
       justify-content: space-between;
       position: relative;
       column-gap: 360px;
-      row-gap: 40px;
+      row-gap: 90px;
+
+      @include nlgs{
+        column-gap: 278px;
+      }
 
       @include nsm {
-        row-gap: 9vw;
+        column-gap: 0;
+        row-gap: 27vw;
+      }
+
+      // .services-by-type__list-container_before
+
+      &_before {
+        &::before{
+          content: '';
+          width: 1px;
+          height: 100%;
+          display: block;
+          position: absolute;
+          transform: translate(-50%, -50%);
+          left: 33%;
+          top: 50%;
+          background-color: $color-Grey-4-cool-logo-bg-alt;
+
+          @include nlgs{
+            bottom: 360px;
+          }
+
+          @include nsm {
+            width: 100%;
+            height: 0.3vw;
+            left: 50%;
+            top: 17%;
+          }
+        }
+      }
+
+      // .services-by-type__list-container_after
+
+      &_after {
+        &::after{
+          content: '';
+          width: 1px;
+          height: 100%;
+          display: block;
+          position: absolute;
+          transform: translate(-50%, -50%);
+          right: 33%;
+          top: 50%;
+          background-color: $color-Grey-4-cool-logo-bg-alt;
+
+          @include nlgs{
+            bottom: 360px;
+          }
+
+          @include nsm {
+            width: 100%;
+            height: 0.3vw;
+            right: -50%;
+            top: 81%;
+          }
+          
+        }
       }
 		}
 
 		// .services-by-type__list-item
 
 		&__list-item {
-      width: 360px;
+      width: 33%;
 
-      @include nlgs{
+      @include nmd{
+        width: 30%;
       }
 
       @include nsm {
@@ -283,41 +344,185 @@
         transform: translate(-50%, -50%);
         top: 50%;
         left: 50%;
+
+        @include nsm {
+          position: relative;
+          top: 0;
+          left: 0;
+          transform: none;
+        }
+      }
+
+      // .services-by-type__list-item_relative
+      
+      &_relative{
+        position: relative;
+        top: -20px;
+
+        @include nlgs{
+          position: static;
+          top: 0;
+        }
+      }
+
+      // .services-by-type__list-item_before
+
+      &_before {
+        &::before{
+          content: '';
+          width: 100%;
+          height: 1px;
+          display: block;
+          position: absolute;
+          transform: translate(-100%, -50%);
+          left: -1.5%;
+          top: 50%;
+          background-color: $color-Grey-4-cool-logo-bg-alt;
+
+          @include nlgs{
+            bottom: 360px;
+          }
+
+          @include nmd{
+            left: -7%;
+          }
+
+          @include nsm {
+            height: 0.3vw;
+            top: -30%;
+            left: 100%;
+          }
+        }
+      }
+
+      // .services-by-type__list-item_after
+
+      &_after {
+        &::after{
+          content: '';
+          width: 100%;
+          height: 1px;
+          display: block;
+          position: absolute;
+          transform: translate(100%, -50%);
+          right: -1%;
+          top: 50%;
+          background-color: $color-Grey-4-cool-logo-bg-alt;
+
+          @include nlgs{
+            bottom: 360px;
+          }
+
+          @include nmd{
+            right: -6%;
+          }
+
+          @include nsm {
+            height: 0.3vw;
+            right: 100%;
+            top: auto;
+            bottom: -25%;
+          }
+        }
+      }
+
+      &_order{
+
+        // .services-by-type__list-item_order_1
+
+        &_1{
+          @include nsm {
+            order: 1
+          }
+        }
+
+        // .services-by-type__list-item_order_1
+
+        &_1{
+          @include nsm {
+            order: 1
+          }
+        }
+
+        // .services-by-type__list-item_order_2
+
+        &_2{
+          @include nsm {
+            order: 2
+          }
+        }
+
+        // .services-by-type__list-item_order_3
+
+        &_3{
+          @include nsm {
+            order: 3
+          }
+        }
+
+        // .services-by-type__list-item_order_4
+
+        &_4{
+          @include nsm {
+            order: 4
+          }
+        }
+
+        // .services-by-type__list-item_order_5
+
+        &_5{
+          @include nsm {
+            order: 5
+          }
+        }
+        
       }
 		}
 
 		// .services-by-type__img-container
 
 		&__img-container {
-      padding: 24px;
-
-      // .services-by-type__img-container_padding-top-0
-
-      &_padding-top-0{
-        padding-top: 0;
-      }
-
-      // .services-by-type__img-container_padding-top-40
-      
-      &_padding-top-40{
-        padding-top: 40px;
-      }
 		}
 
 		// .services-by-type__img
 
 		&__img {
-      width: 75%;
+      width: 62%;
       height: auto;
       display: block;
       margin: auto;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
+
+      @include nlgs{
+        width: 83%;
+        margin-bottom: 16px;
+      }
+
+      @include nsm{
+        width: 78%;
+        margin-bottom: 4.4vw;
+      }
 		}
 
 		// .services-by-type__img-signature
 
 		&__img-signature {
+      width: 87%;
+      margin: auto;
       @include font-H3;
+      color: $color-Grey-2-cool;
       text-align: center;
+
+      @include nsm {
+
+      }
+
+      // .services-by-type__img-signature_width-80
+
+      &_width-80{
+        @include nlgs{
+          width: 80%;
+        }
+      }
 		}
 }
